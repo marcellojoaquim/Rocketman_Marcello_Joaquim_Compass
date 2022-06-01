@@ -1,3 +1,3 @@
-# {c:green}Bem Vindo{/c} ao Repositório Compass [fa=user-astronaut /]
+# Bem ao Repositório Compass
 
 ## Repositório destinado as atividades desenvolvidas na Compass. 
