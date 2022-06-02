@@ -279,6 +279,118 @@ function fizzBuzz(entrada){
     
 }
 
+// Factory Function
+// encapsular informações dentro um metodo
+// no caso deste objeto, voce deve criar uma uma funçao que retorne o objeto.
+const celular = {
+    marca : "Apple",
+    dimensoes: {
+        vertical: 156,
+        horizontal: 80
+    },
+    bateria: 5500,
+    ligar : function(){
+        console.log("Ligando...")
+    }
+}
 
+// exemplo:
+
+function novoCelular(marca, dimensaoTela, bateria){
+    const celular = {
+        marca,
+        dimensaoTela,
+        bateria,
+        ligar(){
+            console.log("Ligando...")
+        }
+    }
+    return celular;
+}
+//instanciar
+
+const celular1 = novoCelular('samsung', 6.5, 5500);
+console.log(celular1);
+
+
+//Constructor Factory
+//uso do Pascal Case definido por convenção
+
+function Celular(marca, dimensaoTela, bateria ){
+    this.marca = marca;
+    this.dimensaoTela = dimensaoTela;
+    this.bateria = bateria;
+    this.ligar = function(){
+        console.log("Ligando...");
+    }
+}
+
+const celular2 = new Celular('nokia', 3.4, 3500);
+console.log(celular2);
+
+// naturza dinamica de objetos
+// criando um objeto
+
+const mouse = {
+    cor: 'red',
+    marca: 'dazz'
+}
+
+//adcionando novas propriedades e funções ao objeto.
+
+mouse.velocidade = 5000;
+mouse.TrocarDPI = function(){
+    console.log('mudando DPI');
+}
+
+// Apagando uma funcao ou propriedade de um objeto.
+
+delete mouse.velocidade;
+delete mouse.TrocarDPI;
+//desta forma é possivel adcionar ou remover funções e/ou propriedades de um objeto.
+
+//Clone de objetos com o metodo Object.assign({}, nome objeto)
+// apos a copia voce pode adcinar novas funcoes e paramentros se valendo da natureza dinamica dos objetos
+
+const notebook ={
+    marca : 'Dell',
+    modelo: 'AlienWare',
+    tela: 16.5,
+    teclado: "RGB",
+    ligar: function(){
+        console.log("Lingando a máquina...");
+    }
+}
+
+const novoNotebook = Object.assign({}, notebook);
+console.log(novoNotebook);
+
+//outra forma de copiar um objeto
+const outroNotebook = {...notebook};
+
+// //uso de Math
+
+// Math.random();
+// Math.max();
+// Math.min();
+
+// //uso de metodos string
+// const mensagem = 'primeira mensagem';
+// const segundaMensagem = new String('segunda mensagem');
+
+// mensagem.includes('primeira'); retorna true se existir a palavra procurada
+// mensagem.startsWith('primeira'); retona true se iniciar com a palavra
+// mensagem.endsWith('mensagem'); retorna true se terminar com a palavra
+// mensagem.indexOf('palavra'); retorna o indice da paravra
+// mensagem.replace('priemira', 'segunda'); troca primeira por segunda palavra
+// mensagem.trim(); retira espaços entre strings
+// mensagem.split(' '); retorna as palavras separadas por espaço
+
+//Template Literal
+
+// object {}
+// boolean 
+//string '',"" 
+// tamplate ``
 
 
