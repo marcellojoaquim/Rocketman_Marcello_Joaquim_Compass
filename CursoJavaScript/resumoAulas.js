@@ -393,4 +393,56 @@ const outroNotebook = {...notebook};
 //string '',"" 
 // tamplate ``
 
+//tipo Date
+// os valores para os meses se iniciam a partir do zero assim com em arrays.
+// também é possivel acessar e alterar atraves de GET e SET.
 
+const data1 = new Date();
+const date2 = new Date('May 02 2022 21:40');
+const date3 = new Date(2022,07,02,21,41);
+
+//Array, encontrar, remover, dividir elementos e array, combinar arrays.
+
+//Inserir Elementos no Array
+let numeros = [1, 2, 3];
+console.log("Antes das insercoes")
+console.log(numeros);
+// inicio
+numeros.unshift(256);
+
+//meio 
+//primeiro parametro é o valor a direita de onde será adcionado
+//segundo parametro é para o caso de deletar um valor, zero não deleta
+// terceiro parametro é o valor inserido
+numeros.splice(1, 0, 512);
+
+//Fim
+numeros.push(4);
+
+console.log("Apos as insercoes")
+console.log(numeros);
+
+//busca em vetor retona o indice do valor no array ou -1 caso não exista o valor procurado.
+//o tipo tambem é levado em conta.
+console.log(numeros.indexOf(256));
+console.log(numeros.indexOf(1024));
+
+//lastIndexOf encontra o valor que se repete com maior indice.
+numeros.push(2);
+console.log(numeros);
+console.log(numeros.lastIndexOf(2));
+
+// encontrar tipo referancia
+
+const marcas = [
+    {id : 1, nome : 'marca a'},
+    {id : 2, nome : 'marca b'}
+]
+
+let marca = marcas.find(function(marca){
+    return marca.nome ==='marca a';
+});
+
+console.log(marca);
+
+//

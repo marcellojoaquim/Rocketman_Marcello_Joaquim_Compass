@@ -11,3 +11,4 @@ pelo surgimento do Linux, que é baseado no Unix
 assim como a amaioria dos sistemas operacionais. `
 
 console.log(texto);
+
