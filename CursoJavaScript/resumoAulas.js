@@ -444,5 +444,101 @@ let marca = marcas.find(function(marca){
 });
 
 console.log(marca);
+//teste array
+var array = [ "zero", "one", "two", "three", "four", "five" ];
+    
+var copyOfArray = array.slice();
+    copyOfArray[3] = "changed in copyOfArray";
+    console.log(array[3]);
 
-//
+
+
+    //Arrow Function
+// voce remove a palavra 'function', adiciona apos o parametro '=>'
+//se apenas um parâmetro, os parenteses são opcionais.
+
+//sem o uso de arrow functrion
+const objetos = [
+    { id : 1, nome:'a'},
+    { id : 2, nome:'b'}
+];
+
+objetos.find(function(objeto){
+    return objeto.nome === 'a';
+});
+
+//com o uso de arrow function
+objetos.find((objeto) =>{
+    return objeto.nome === 'a';
+});
+
+//uso de arrow function sem parâmetro
+objetos.find(() =>{
+    return nome === 'a';
+});
+
+//como limpar um array(esvaziar)
+let array1 = [1,2,3,4,5,6];
+const array2  = [1,2,3,4,5,6];
+const array3 = [1,2,3,4,5,6];
+const array4 = [1,2,3,4,5,6];
+let outros = [];
+//solucao 1
+outros = array1;
+array1 = [];
+console.log(outros);
+console.log(array1);
+
+//solução 2
+outros = array2;
+array2.length = 0;
+console.log(outros);
+console.log(array2);
+
+//solução 3
+outros = array3;
+array3.splice(0, array3.length);
+console.log(outros);
+console.log(array3);
+
+//solucao 4 menor desempenho.
+outros = array4;
+while(array4.length > 0){
+    array4.pop();
+}
+console.log(outros);
+console.log(array4);
+
+
+//combinar e dividir array
+
+//combinar array
+const primeiro = [1,2,3];
+const segundo = [4,5,6];
+
+const result = primeiro.concat(segundo);
+console.log(result);
+const result2 = result.join('.');
+console.log(result2);
+//dividir array o ultimo valor nao é removido. Se apenas um paramatro será considerado ate o fim 
+//a partir do parametro passado
+const dividido = result.slice(1,3);
+console.log(dividido);
+
+
+
+// forEach
+
+const dados = [1,2,3,4,5,6,7,8,9];
+
+dados.forEach((dados, indice) => console.log(dados,indice));
+
+//Outra Forma 
+dados.forEach(function(dados){
+    console.log(dados)
+})
+
+const palavras = "Acredite isto é uma frase!";
+const palavrasDivididas = palavras.split(' ');
+console.log(palavrasDivididas);
+
