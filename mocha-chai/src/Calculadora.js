@@ -44,5 +44,11 @@ export default class Calculadora{
             return a + this.somatorio(a-1)
         }
     }
-
+    static calculaPrimo(numero, divisor){
+    
+        if (numero % divisor ===0){
+            return false;
+        }
+    return true;
+    }
 }

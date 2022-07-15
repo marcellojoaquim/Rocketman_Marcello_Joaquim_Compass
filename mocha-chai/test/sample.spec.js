@@ -1,9 +1,10 @@
 import assert from 'assert'
-import chai, { expect } from 'chai'
+import chai from 'chai'
 import Calculadora from '../src/Calculadora.js'
 
 
-const axpect = chai.expect
+
+const expect = chai.expect
 
 // describe('Meu primeiro teste', () => {
 //     it('Verificar igualdade1', () =>{
@@ -76,6 +77,13 @@ describe('Teste Calculadora', () => {
         expect(resultado).to.be.eq(10);
     })
 
+    })
+
+    describe('Teste CalculaPrimo', () => {
+        it('Verificar Tipo', () =>{
+            let resultado = Calculadora.calculaPrimo(3,2);
+            expect(resultado).to.be.a('boolean');
+        })
     })
 
     
